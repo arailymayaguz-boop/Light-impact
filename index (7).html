@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07111f">
+<title>LIGHT IMPACT | Ғылыми зерттеу платформасы</title>
+<style>
+:root{--bg:#07111f;--panel:#101e30;--panel2:#14263b;--line:#29415b;--text:#edf5ff;--muted:#9bb0c8;--cyan:#55d9e8;--lime:#b7ed83;--gold:#ffd27d;--pink:#f2a5d7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#15304a 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,92%);margin:auto}.top{position:sticky;top:0;z-index:20;background:#07111feF;backdrop-filter:blur(14px);border-bottom:1px solid #20354b}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}.brand{font-weight:900;letter-spacing:2px;font-size:18px}.brand b{color:var(--cyan)}.navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.navlinks a:hover{color:var(--cyan)}.hero{padding:70px 0 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-3px;margin:16px 0}.hero h1 span{color:var(--cyan)}.lead{color:#b6c8dc;font-size:17px;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:12px 17px;border-radius:12px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn.primary{background:var(--cyan);color:#04131c;border-color:var(--cyan)}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.hero-art{min-height:310px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(145deg,#122c43,#0b1727);position:relative;overflow:hidden;padding:25px;display:flex;align-items:center;justify-content:center}.orbit{width:230px;height:230px;border:1px solid #4c9eaf;border-radius:50%;position:relative;box-shadow:0 0 55px #36c9d533,inset 0 0 45px #36c9d522}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #4c9eaf88;border-radius:50%;inset:25px;transform:rotate(55deg) scaleX(.5)}.orbit:after{transform:rotate(-55deg) scaleX(.5)}.planet{position:absolute;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#d9fbff,#4bbbd0 45%,#176080 75%);top:78px;left:78px;box-shadow:0 0 35px #55d9e8aa}.star{position:absolute;color:var(--gold);font-size:20px}.float{position:absolute;background:#0a1b2bde;border:1px solid var(--line);padding:10px 13px;border-radius:12px;font-size:12px;color:var(--muted)}.f1{top:25px;left:20px}.f2{right:18px;bottom:35px}.f3{left:25px;bottom:55px}.section{padding:45px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.section h2{font-size:clamp(26px,4vw,38px);margin:5px 0}.sub{color:var(--muted);max-width:650px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(150deg,var(--panel),#0c1929);border:1px solid var(--line);border-radius:18px;padding:21px;min-width:0}.card h3{margin:7px 0;font-size:18px}.card p{color:var(--muted);font-size:14px;margin:7px 0 15px}.icon{font-size:27px}.tag{display:inline-block;font-size:10px;letter-spacing:1px;color:var(--cyan);border:1px solid #357080;border-radius:20px;padding:4px 8px;font-weight:800}.portal{display:flex;flex-direction:column;min-height:230px}.portal .btn{margin-top:auto}.portal.one{background:linear-gradient(145deg,#12364a,#101e30)}.portal.two{background:linear-gradient(145deg,#243b32,#101e30)}.portal.three{background:linear-gradient(145deg,#2b2947,#101e30)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.control{display:grid;gap:8px;margin:13px 0}.control label{font-size:13px;color:#c6d5e5}.control input,.control select{width:100%;background:#081625;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px}.range-row{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.visual{height:205px;border-radius:14px;background:linear-gradient(#06101d,#0c1d2d);border:1px solid var(--line);position:relative;overflow:hidden;margin:12px 0}.lamp{position:absolute;top:22px;left:50%;width:7px;height:80px;background:#b6c8d6;transform:translateX(-50%)}.lamp:before{content:"";position:absolute;top:-5px;left:-24px;width:55px;height:15px;border-radius:5px;background:#b6c8d6}.beam{position:absolute;top:37px;left:50%;transform:translateX(-50%);width:var(--beam,170px);height:145px;clip-path:polygon(43% 0,57% 0,100% 100%,0 100%);background:linear-gradient(#ffe9a8aa,#ffe9a800);transition:all .2s}.ground{position:absolute;bottom:25px;left:0;right:0;height:2px;background:#7391a7}.ground:after{content:"";position:absolute;left:0;right:0;top:2px;height:22px;background:linear-gradient(#29435a55,transparent)}.sim-note{font-size:12px;color:var(--muted)}.metric{font-size:28px;font-weight:850;color:var(--lime)}.metric small{font-size:12px;color:var(--muted);font-weight:500}.chartbox{height:230px;background:#091725;border:1px solid var(--line);border-radius:14px;padding:12px}.chartbox canvas{width:100%;height:100%}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{padding:10px;border-bottom:1px solid var(--line);text-align:left}.table th{color:var(--cyan);font-weight:700}.table td{color:#c6d5e5}.notice{background:#192b32;border:1px solid #45664d;border-radius:12px;padding:12px 14px;color:#d4e9ce;font-size:13px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tab{border:1px solid var(--line);border-radius:10px;padding:9px 13px;color:var(--muted);background:#0a1828}.tab.active{background:#174052;color:#e9fbff;border-color:#39899b}.result{background:#0a1828;border:1px solid var(--line);border-radius:12px;padding:15px;margin-top:12px}.result strong{color:var(--lime)}.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.small{font-size:12px;color:var(--muted)}.pillrow{display:flex;gap:8px;flex-wrap:wrap}.pill{padding:7px 10px;border-radius:9px;background:#13263a;border:1px solid var(--line);font-size:12px;color:#bfd2e5}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:45px}.hero-art{min-height:260px}.grid{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.section{padding:32px 0}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.section-head{display:block}.card{padding:17px}}
+
+.impact-row{display:flex;justify-content:space-between;gap:12px;margin:18px 0 7px;font-size:14px}.impact-row b{color:var(--cyan);white-space:nowrap}.meter{height:9px;background:#26384c;border-radius:99px;overflow:hidden}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#55d9e8,#ffd27d,#f2a5d7);border-radius:99px;transition:width .35s}.film-frame{position:relative;overflow:hidden;border:9px solid #1a2635;border-radius:12px;background:#05080d;aspect-ratio:3/2}.film-frame canvas{width:100%;height:100%;display:block;filter:grayscale(1) contrast(1.15)}.film-veil{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#05080d;color:#d8e5ee;font-weight:800;letter-spacing:3px;font-size:12px;transition:opacity 1s}.film-veil.revealed{opacity:0;pointer-events:none}.platform-link{display:block;transition:transform .2s,border-color .2s}.platform-link:hover{transform:translateY(-4px);border-color:var(--cyan)}.link-label{display:inline-block;margin-top:12px;color:var(--cyan);font-weight:800}.btn.primary{background:var(--cyan);color:#06111d;border-color:var(--cyan);font-weight:800}
+@media(max-width:720px){.navlinks{gap:10px}.navlinks a{font-size:11px}.impact-row{font-size:12px}}
+
+
+.sdg-grid{grid-template-columns:repeat(auto-fit,minmax(235px,1fr))}.sdg-card{position:relative;overflow:hidden;min-height:245px}.sdg-num{font-size:36px;font-weight:950;letter-spacing:1px;color:var(--cyan);line-height:1.1;margin-bottom:12px}.sdg-link{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--lime)}.sdg-summary{margin-top:20px;padding:20px}.author-block{padding:26px 0;text-align:center}.author-block h3{margin:8px 0}.author-name{font-size:20px;font-weight:850;color:var(--text);margin:8px 0}.author-contact{margin:6px 0 18px}.author-contact a{color:var(--cyan);font-weight:800}.author-block .small{color:var(--muted);line-height:1.8}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home">LIGHT <b>IMPACT</b></a><nav class="navlinks"><a href="#methods">Зерттеу әдістері</a><a href="#lab">Модельдеу</a><a href="#light-game">Жарық ойыны</a><a href="#photo-lab">Фото зертхана</a><a href="#data">Деректер</a><a href="#game">Ғылыми ойын</a><a href="#about">Жоба туралы</a><a href="#sdgs">Тұрақты даму</a><a href="#platforms">Басқа платформалар</a></nav></div></header>
+<main id="home">
+<section class="wrap hero">
+ <div><div class="eyebrow">DIGITAL SCIENCE PROJECT · 2026</div><h1>Жарықты <span>зертте.</span><br>Әсерін түсін.</h1><p class="lead">Камера обскурадан бастап түнгі аспанның жарықтануына дейін — оптика мен жарық ластануын бір цифрлық ғылыми кеңістікте зертте.</p><div class="actions"><a class="btn primary" href="#lab">Зертхананы бастау ↗</a><a class="btn" href="#platforms">Үш платформаны көру</a></div><p class="small">Физика · Экология · Модельдеу · Деректерді талдау</p></div>
+ <div class="hero-art"><span class="star" style="top:35px;right:55px">✦</span><span class="star" style="bottom:45px;right:65px">✧</span><span class="star" style="top:90px;left:42px">✦</span><div class="orbit"><div class="planet"></div></div><div class="float f1">☼ Жарық физикасы</div><div class="float f2">◉ Экологиялық әсер</div><div class="float f3">✧ Түнгі аспан</div></div>
+</section>
+<section class="wrap section" id="lab">
+ <div class="section-head"><div><div class="eyebrow">INTERACTIVE SIMULATION</div><h2>Жарықтандыруды модельдеу</h2><p class="sub">Шамның бағыты мен жарық қуатын өзгертіп, жарықтың кеңістікке таралуының шартты визуализациясын көр.</p></div></div>
+ <div class="two-col">
+  <div class="card"><h3>💡 Шам параметрлері</h3>
+   <div class="control"><label for="power">Жарық қуатының шартты деңгейі: <b id="powerVal">60%</b></label><input id="power" type="range" min="10" max="100" value="60"></div>
+   <div class="control"><label for="angle">Шам бағыты: <b id="angleVal">0°</b></label><input id="angle" type="range" min="-60" max="60" value="0"></div>
+   <div class="control"><label for="shield">Жарық қалқаны</label><select id="shield"><option value="no">Қалқансыз шам</option><option value="yes">Бағыттаушы қалқанмен</option></select></div>
+   <div class="visual" id="visual"><div class="lamp" id="lamp"></div><div class="beam" id="beam"></div><div class="ground"></div></div>
+   <div class="pillrow"><span class="pill" id="directionText">Бағыты: төмен</span><span class="pill" id="shieldText">Қалқан: жоқ</span></div>
+   <p class="sim-note">Бұл — оқу мақсатындағы иллюстрациялық модель. Нақты люкс өлшемі немесе нақты қаланың дерегі емес.</p>
+  </div>
+  <div class="card"><h3>📊 Модель нәтижесі</h3><p class="small">Параметрлерге байланысты есептелетін шартты көрсеткіштер</p>
+   <div class="control"><label>Жерге бағытталған жарық үлесі</label><div class="metric" id="groundMetric">60% <small>шартты индекс</small></div></div>
+   <div class="control"><label>Аспанға таралуының шартты индексі</label><div class="metric" id="skyMetric">40% <small>шартты индекс</small></div></div>
+   <div class="control"><label>Бағыттау тиімділігі</label><div class="metric" id="effMetric">60% <small>шартты индекс</small></div></div>
+   <div class="notice">Қорытынды: жарықты қажетті аймаққа бағыттау және артық шашырауды азайту — жарық ластануын төмендетудің маңызды тәсілдері.</div>
+   <button class="btn primary" style="margin-top:14px" id="saveModel">Модель нәтижесін журналға сақтау</button>
+  </div>
+ </div>
+</section>
+
+<section class="wrap section" id="light-game">
+ <div class="section-head"><div><div class="eyebrow">NIGHT SKY SIMULATOR · INTERACTIVE</div><h2>Жарық ластануы: түнгі аспан қалай өзгереді?</h2><p class="sub">Жүгірткіні жылжытып, жасанды жарық көбейген сайын аспан көрінісі мен түнгі тіршілікке ықтимал әсерін бақыла.</p></div></div>
+ <div class="two-col">
+  <div class="card">
+   <h3>🌃 Қаладағы жарық деңгейі</h3>
+   <div class="control"><label for="pollutionLevel">Жарық ластануы: <b id="pollutionValue">20%</b></label><input id="pollutionLevel" type="range" min="0" max="100" value="20"></div>
+   <div class="pillrow"><span class="pill">⭐ Көрінетін жұлдыздар: <b id="starCount">—</b></span><span class="pill">💡 Жасанды жарық: <b id="lampCount">—</b></span></div>
+   <canvas id="nightCanvas" width="900" height="430" style="width:100%;display:block;border-radius:14px;margin-top:15px;background:#07111f;border:1px solid var(--line)" aria-label="Жарық ластануына байланысты түнгі аспанның өзгеруі"></canvas>
+   <p class="small" id="nightCaption">Төмен деңгей: жұлдыздар анық көрінеді.</p>
+  </div>
+  <div class="card">
+   <h3>🦉 Түнгі жануарларға ықтимал әсері</h3>
+   <p>Жарық көбейген сайын жануарлар саны автоматты түрде көбеймейді. Керісінше, кейбір түрлердің қозғалысы, қоректенуі және бағдарлануы өзгеруі мүмкін.</p>
+   <div class="impact-row"><span>Түнгі жәндіктердің шамға тартылуы</span><b id="insectImpact">Төмен</b></div>
+   <div class="meter"><i id="insectBar"></i></div>
+   <div class="impact-row"><span>Түнгі құстардың бағдарлану қаупі</span><b id="birdImpact">Төмен</b></div>
+   <div class="meter"><i id="birdBar"></i></div>
+   <div class="impact-row"><span>Табиғи қараңғылықтың азаюы</span><b id="darkImpact">Төмен</b></div>
+   <div class="meter"><i id="darkBar"></i></div>
+   <div class="result" id="impactNote">Бұл — құбылысты түсіндіретін шартты оқу моделі. Көрсеткіштер нақты жануар санын немесе далалық өлшеуді білдірмейді.</div>
+  </div>
+ </div>
+</section>
+
+<section class="wrap section" id="photo-lab">
+ <div class="section-head"><div><div class="eyebrow">CAMERA OBSCURA · PHOTO LAB</div><h2>Камера обскура: өз фотосуретіңді шығар</h2><p class="sub">Көріністің кішкентай тесіктен өтіп, экранда төңкеріліп пайда болуын бақыла. Содан кейін фотопленкадан шығарғандай кескінді біртіндеп аш.</p></div></div>
+ <div class="two-col">
+  <div class="card">
+   <h3>📷 Камераның ішіндегі көрініс</h3>
+   <canvas id="obscuraCanvas" width="900" height="430" style="width:100%;display:block;border-radius:14px;background:#07111f;border:1px solid var(--line)" aria-label="Камера обскура ішіндегі төңкерілген кескін"></canvas>
+   <div class="pillrow" style="margin-top:12px"><span class="pill">Кескін: төңкерілген</span><span class="pill">Экран: ақ күңгірт бет</span></div>
+   <p class="small">Сәулелер кішкентай тесіктен өткенде жоғарыдан келген жарық төменгі жаққа, төменнен келген жарық жоғарғы жаққа түседі.</p>
+  </div>
+  <div class="card">
+   <h3>🎞️ Фотопленкадан шығару</h3>
+   <div class="film-frame" id="filmFrame"><canvas id="filmCanvas" width="720" height="480" aria-label="Біртіндеп пайда болатын фотопленка кескіні"></canvas><div class="film-veil" id="filmVeil"><span>ФОТОПЛЕНКА · КҮТІҢІЗ...</span></div></div>
+   <div class="control"><label for="exposure">Экспозиция уақыты: <b id="exposureValue">5 сек</b></label><input id="exposure" type="range" min="1" max="10" value="5"></div>
+   <button class="btn primary" id="developPhoto">🎞️ Фотосуретті шығару</button>
+   <button class="btn" id="resetPhoto" style="margin-left:8px">Қайта бастау</button>
+   <p class="small" id="photoStatus">Түймені басқанда фотосурет қараңғы пленкадан біртіндеп айқындала бастайды. Бұл — фотопроцестің көрнекі симуляциясы.</p>
+  </div>
+ </div>
+</section>
+
+<section class="wrap section" id="data">
+ <div class="section-head"><div><div class="eyebrow">YOUR OBSERVATIONS</div><h2>Зерттеу деректерінің журналы</h2><p class="sub">Өзің өлшеген немесе бақылаған деректерді енгіз. Олар осы браузерде сақталады.</p></div></div>
+ <div class="two-col">
+  <div class="card"><h3>✍️ Жаңа бақылау енгізу</h3>
+   <div class="control"><label for="place">Бақылау орны</label><input id="place" placeholder="Мысалы: Аягөз, мектеп ауласы"></div>
+   <div class="control"><label for="date">Күні</label><input id="date" type="date"></div>
+   <div class="control"><label for="lux">Жарық өлшегіш көрсеткіші (люкс)</label><input id="lux" type="number" min="0" step="0.1" placeholder="Өлшенген мәнді енгіз"></div>
+   <div class="control"><label for="weather">Ауа райы / аспан жағдайы</label><select id="weather"><option>Ашық</option><option>Бұлтты</option><option>Жартылай бұлтты</option><option>Басқа</option></select></div>
+   <div class="control"><label for="note">Қосымша ескерту</label><input id="note" placeholder="Шам түрі, уақыт, қашықтық..."></div>
+   <button class="btn primary" id="addRecord">Бақылауды сақтау</button><p class="small">Тек өзің нақты өлшеген мәндерді енгіз. Құрал көрсеткіші болмаса, бос қалдыр.</p>
+  </div>
+  <div class="card"><h3>📈 Жиналған деректер</h3><div class="metric" id="recordCount">0 <small>бақылау</small></div><div class="chartbox"><canvas id="chart" aria-label="Бақылау деректерінің графигі"></canvas></div><p class="small" id="chartHint">Дерек енгізілгеннен кейін график пайда болады.</p></div>
+ </div>
+ <div class="card" style="margin-top:16px"><div class="section-head"><div><h3>Бақылаулар кестесі</h3><p class="small">Жазбалар осы құрылғының браузерінде сақталады.</p></div><button class="btn" id="exportCsv">CSV жүктеу ↓</button></div><div style="overflow-x:auto"><table class="table"><thead><tr><th>Күні</th><th>Орын</th><th>Люкс</th><th>Аспан</th><th>Ескерту</th><th></th></tr></thead><tbody id="records"><tr><td colspan="6" class="small">Әзірге жазба жоқ.</td></tr></tbody></table></div></div>
+</section>
+<section class="wrap section" id="research">
+ <div class="section-head"><div><div class="eyebrow">RESEARCH TOOLS</div><h2>Ғылыми талдау құралдары</h2><p class="sub">Жобаны тәжірибелік зерттеуге айналдыруға арналған қосымша модульдер.</p></div></div>
+ <div class="grid">
+  <div class="card"><div class="icon">🔬</div><h3>Камера обскура деректерін талдау</h3><p>Тесік диаметрі бойынша өз тәжірибеңнің жарықтығы мен анықтығын салыстыр.</p><div class="control"><label>Тесік диаметрі (мм)</label><select id="hole"><option>0.3</option><option>0.5</option><option>0.7</option><option>1.0</option></select></div><div class="control"><label>Кескін анықтығы (1–10)</label><input id="sharp" type="number" min="1" max="10" value="7"></div><div class="control"><label>Кескін жарықтығы (1–10)</label><input id="brightness" type="number" min="1" max="10" value="5"></div><button class="btn" id="addHole">Нәтижені салыстыруға қосу</button><div class="result" id="holeResult">Тәжірибе нәтижесін енгіз.</div></div>
+  <div class="card"><div class="icon">🌱</div><h3>Экологиялық шешім конструкторы</h3><p>Жарық ластануын азайтуға арналған шешімдерді таңдап, ұсыныс жаса.</p><div class="control"><label><input type="checkbox" class="solution" value="Толық бағытталған шамдар" checked> Толық бағытталған шамдар</label><label><input type="checkbox" class="solution" value="Қажетсіз уақытта автоматты өшіру"> Қажетсіз уақытта автоматты өшіру</label><label><input type="checkbox" class="solution" value="Жарық қуатын оңтайландыру"> Жарық қуатын оңтайландыру</label><label><input type="checkbox" class="solution" value="Жылы түсті жарықты орынды қолдану"> Жылы түсті жарықты орынды қолдану</label></div><button class="btn" id="makePlan">Ұсыныс құрастыру</button><div class="result" id="planResult">Шешімдерді таңдап, ұсыныс құрастыр.</div></div>
+  <div class="card"><div class="icon">🧠</div><h3>Зерттеу сұрағы генераторы</h3><p>Ғылыми жұмысыңның келесі кезеңіне зерттеу сұрағын таңда.</p><div class="control"><label>Бағыт</label><select id="topic"><option value="optics">Оптика</option><option value="environment">Экология</option><option value="technology">Технология</option></select></div><button class="btn" id="questionBtn">Сұрақ ұсыну</button><div class="result" id="questionResult">Мұнда зерттеу сұрағы пайда болады.</div></div>
+ </div>
+</section>
+
+<section class="wrap section" id="methods">
+ <div class="section-head"><div><div class="eyebrow">RESEARCH TOOLKIT</div><h2>Зерттеу әдістері</h2><p class="sub">Ғылыми жұмысыңды тек ақпаратпен шектемей, бақылау, өлшеу, салыстыру және тәжірибе арқылы дәлелдеуге арналған құралдар.</p></div></div>
+ <div class="grid">
+  <article class="card"><div class="icon">📏</div><h3>1. Өлшеу әдісі</h3><p>Жарық деңгейін бірдей қашықтықта, бірдей уақытта өлшеп, нәтижелерді тірке.</p><div class="result">Ұсыныс: өлшеу құралын, өлшем бірлігін, уақыт пен орынды міндетті түрде жаз.</div></article>
+  <article class="card"><div class="icon">⚖️</div><h3>2. Салыстырмалы әдіс</h3><p>Қала мен ауылды, қалқанды және қалқансыз шамды немесе әртүрлі тесік диаметрлерін салыстыр.</p><div class="result">Нәтиже: айырмашылықты кесте және диаграмма арқылы көрсет.</div></article>
+  <article class="card"><div class="icon">👁️</div><h3>3. Бақылау әдісі</h3><p>Түнгі аспанның көрінісін, шамдардың орналасуын және жарықтың таралу бағытын бақыла.</p><div class="result">Ескерту: бақылау кезінде күн, уақыт, ауа райы және орын жағдайын белгіле.</div></article>
+  <article class="card"><div class="icon">🧪</div><h3>4. Эксперимент әдісі</h3><p>Бір параметрді ғана өзгертіп, қалған жағдайларды тұрақты ұста. Мысалы, камера обскурадағы тесік диаметрі.</p><div class="result">Маңызды: тәжірибені бірнеше рет қайталап, орташа нәтижені есепте.</div></article>
+  <article class="card"><div class="icon">💡</div><h3>5. Гипотезаны тексеру</h3><p>Алдымен болжам жаса, содан кейін оны тәжірибелік деректермен тексер.</p><div class="control"><label for="hypothesis">Менің гипотезам</label><input id="hypothesis" placeholder="Мысалы: қалқан жарықтың жоғары шашырауын азайтады"></div><div class="result" id="hypothesisResult">Гипотезаңызды жазып, зерттеу жоспарына қосыңыз.</div><button class="btn" id="saveHypothesis">Гипотезаны сақтау</button></article>
+  <article class="card"><div class="icon">📊</div><h3>6. Сандық талдау</h3><p>Өлшемдерден орташа мәнді, ең үлкен және ең кіші нәтижені есепте.</p><div class="control"><label for="numbers">Сандарды үтірмен енгіз</label><input id="numbers" placeholder="12, 15, 11, 18"></div><button class="btn" id="analyzeNumbers">Есептеу</button><div class="result" id="numberResult">Мысалы: 12, 15, 11, 18</div></article>
+  <article class="card"><div class="icon">🗺️</div><h3>7. Кеңістіктік талдау</h3><p>Бақылау орындарын картаға белгіле. Қай жерде жарық көздері көп екенін салыстыр.</p><div class="result">Далалық жұмысқа арналған үлгі: орын атауы · координат · уақыт · жарық көзі · ескерту.</div></article>
+  <article class="card"><div class="icon">🔁</div><h3>8. Қайталау және сенімділік</h3><p>Бір өлшеуді бірнеше рет қайталап, нәтижелердің тұрақтылығын бағала.</p><div class="result">Бір реттік бақылаудан үлкен қорытынды жасама.</div></article>
+  <article class="card"><div class="icon">📝</div><h3>9. Ғылыми қорытынды</h3><p>Зерттеу сұрағына жауап беріп, гипотезаның расталғанын немесе расталмағанын деректермен түсіндір.</p><div class="result">Құрылымы: нәтиже → дәлел → шектеу → келесі зерттеу қадамы.</div></article>
+ </div>
+</section>
+
+<section class="wrap section" id="game">
+ <div class="section-head"><div><div class="eyebrow">SCIENCE QUEST · BONUS MODE</div><h2>Ғылыми миссия</h2><p class="sub">Қысқа мини-ойындар арқылы біліміңді тексер. Дұрыс жауапқа ұпай жинап, жаңа деңгейлер мен марапат белгілерін аш.</p></div></div>
+ <div class="two-col">
+  <div class="card">
+   <div class="pillrow"><span class="pill">⭐ Ұпай: <b id="xp">0</b></span><span class="pill">🏅 Деңгей: <b id="level">Зерттеуші</b></span><span class="pill">🎯 Серия: <b id="streak">0</b></span></div>
+   <h3 style="margin-top:20px">🔎 Жылдам ғылыми quiz</h3>
+   <p id="quizQuestion">Камера обскурада кескіннің пайда болуына не себеп болады?</p>
+   <div id="quizOptions" class="grid" style="grid-template-columns:1fr 1fr">
+    <button class="btn" data-answer="a">Жарықтың түзу сызық бойымен таралуы</button>
+    <button class="btn" data-answer="b">Дыбыстың шағылуы</button>
+    <button class="btn" data-answer="c">Ауаның қысымы</button>
+    <button class="btn" data-answer="d">Магнит өрісі</button>
+   </div>
+   <div class="result" id="quizFeedback">Дұрыс жауапты таңда. Әр дұрыс жауап +10 ұпай береді.</div>
+   <button class="btn primary" id="nextQuestion" style="margin-top:12px">Келесі сұрақ →</button>
+  </div>
+  <div class="card">
+   <h3>🏆 Сенің марапаттарың</h3>
+   <p>Ұпай жинаған сайын марапаттар ашылады. Бұл — сайт ішіндегі оқу жетістіктері, ресми сертификат емес.</p>
+   <div class="grid" style="grid-template-columns:1fr 1fr">
+    <div class="result" id="badge1">🔒<br><b>Алғашқы қадам</b><br><span class="small">10 ұпай</span></div>
+    <div class="result" id="badge2">🔒<br><b>Оптика білгірі</b><br><span class="small">30 ұпай</span></div>
+    <div class="result" id="badge3">🔒<br><b>Эко-зерттеуші</b><br><span class="small">50 ұпай</span></div>
+    <div class="result" id="badge4">🔒<br><b>Ғылыми шебер</b><br><span class="small">100 ұпай</span></div>
+   </div>
+   <div class="result"><b>Бонус миссия:</b> бақылау журналына нақты өлшем енгізіп, зерттеу деректерін жина. Әр сақталған бақылау үшін +5 ұпай.</div>
+  </div>
+ </div>
+</section>
+
+<section class="wrap section" id="about">
+ <div class="section-head"><div><div class="eyebrow">ABOUT THE PROJECT</div><h2>Жобаның ғылыми мақсаты</h2></div></div>
+ <div class="two-col">
+  <div class="card"><h3>Негізгі идея</h3><p>Камера обскура арқылы жарықтың таралуы мен кескіннің қалыптасуын тәжірибелік зерттеу, ал жарық ластануы бөлімі арқылы жасанды жарықтың түнгі ортаға ықтимал әсерін қарастыру.</p><p>LIGHT IMPACT осы екі бағытты бір цифрлық платформада байланыстырады: модельдеу, дерек жинау, салыстыру және ғылыми қорытынды.</p></div>
+  <div class="card"><h3>Зерттеу кезеңдері</h3><div class="pillrow"><span class="pill">01 · Бақылау</span><span class="pill">02 · Өлшеу</span><span class="pill">03 · Модельдеу</span><span class="pill">04 · Салыстыру</span><span class="pill">05 · Қорытынды</span></div><p class="small" style="margin-top:15px">Платформадағы модель нәтижелері оқу мақсатында жасалған. Ғылыми қорытындыда нақты эксперимент пен сенімді дереккөздерге сүйену қажет.</p></div>
+ </div>
+</section>
+</main>
+
+
+<section class="wrap section" id="sdgs">
+ <div class="section-head"><div><div class="eyebrow">SUSTAINABLE DEVELOPMENT GOALS · SDGs</div><h2>Тұрақты даму мақсаттарымен байланысы</h2><p class="sub">LIGHT IMPACT платформасы жарық құбылысын зерттеу арқылы ғылым, қоршаған орта және тұрақты қалалар арасындағы байланысты көрсетеді.</p></div></div>
+ <div class="grid sdg-grid">
+  <article class="card sdg-card"><div class="sdg-num">04</div><h3>Сапалы білім</h3><p>Интерактивті модельдеу, камера обскура тәжірибесі және ғылыми ойын оқушының зерттеу, бақылау және талдау дағдыларын дамытуға көмектеседі.</p><span class="sdg-link">Платформадағы байланыс: зерттеу әдістері, фото зертхана, Science Quest.</span></article>
+  <article class="card sdg-card"><div class="sdg-num">07</div><h3>Қолжетімді және таза энергия</h3><p>Қажетсіз жарықты азайту, шамды тиімді пайдалану және жарықты тек керекті бағытқа түсіру электр энергиясын үнемдеуге ықпал етеді.</p><span class="sdg-link">Платформадағы байланыс: жарықтандыруды модельдеу, бағыттаушы қалқан.</span></article>
+  <article class="card sdg-card"><div class="sdg-num">09</div><h3>Индустрия, инновациялар және инфрақұрылым</h3><p>Камера обскураның жұмысын зерттеу және цифрлық модель құрастыру ғылыми-техникалық ойлау мен инновациялық шешімдерді түсінуге мүмкіндік береді.</p><span class="sdg-link">Платформадағы байланыс: Camera Obscura Photo Lab және интерактивті модельдер.</span></article>
+  <article class="card sdg-card"><div class="sdg-num">11</div><h3>Тұрақты қалалар мен елді мекендер</h3><p>Қалалық жарықты дұрыс жобалау, шамдарды төмен бағыттау және түнде артық жарықтандыруды шектеу — жайлы әрі экологиялық қалалық ортаның бір бөлігі.</p><span class="sdg-link">Платформадағы байланыс: жарық ластануы симуляторы және шешімдер конструкторы.</span></article>
+  <article class="card sdg-card"><div class="sdg-num">13</div><h3>Климаттың өзгеруімен күрес</h3><p>Энергияны босқа жұмсамау электр энергиясына сұранысты азайтуға көмектеседі. Энергия өндіру тәсіліне қарай бұл парниктік газдар шығарындыларын да қысқартуы мүмкін.</p><span class="sdg-link">Платформадағы байланыс: энергия үнемдеу және жарықтандыруды оңтайландыру.</span></article>
+  <article class="card sdg-card"><div class="sdg-num">15</div><h3>Құрлықтағы экожүйелерді сақтау</h3><p>Түнгі жасанды жарық кейбір жәндіктердің, құстардың және басқа жануарлардың бағдарлануына, қозғалысына және табиғи белсенділігіне әсер етуі мүмкін.</p><span class="sdg-link">Платформадағы байланыс: түнгі аспан симуляторы және жануарларға ықтимал әсер.</span></article>
+  <article class="card sdg-card"><div class="sdg-num">17</div><h3>Мақсаттар жолындағы серіктестік</h3><p>Зерттеу нәтижелерін мектеппен, ғылыми қауымдастықпен және жергілікті қоғамдастықпен бөлісу экологиялық сауаттылықты арттыруға мүмкіндік береді.</p><span class="sdg-link">Платформадағы байланыс: ашық цифрлық платформа және зерттеу деректерін бөлісу.</span></article>
+ </div>
+ <div class="result sdg-summary"><b>Негізгі идея:</b> жарық ластануын азайту — тек түнгі аспанды қорғау емес. Бұл энергияны ұтымды пайдалану, қалалық ортаны жақсарту және тірі табиғатқа қамқорлық жасау арқылы тұрақты дамуға үлес қосу.</div>
+</section>
+
+<section class="wrap section" id="platforms">
+ <div class="section-head"><div><div class="eyebrow">CONNECTED PROJECTS</div><h2>Басқа зерттеу платформалары</h2><p class="sub">LIGHT IMPACT ішінен бұрын жасаған екі платформаңа тікелей өте аласың.</p></div></div>
+ <div class="grid">
+  <a class="card platform-link" href="https://arailymayaguz-boop.github.io/obskura-lab-2/" target="_blank" rel="noopener"><div class="icon">📷</div><h3>OBSCURA LAB</h3><p>Камера обскура моделіне арналған интерактивті зертхана.</p><span class="link-label">Платформаға өту ↗</span></a>
+  <a class="card platform-link" href="https://arailymayaguz-boop.github.io/Jaryq-lastanu-cd/" target="_blank" rel="noopener"><div class="icon">🌌</div><h3>JARYQ · LIGHT POLLUTION</h3><p>Жарық ластануы тақырыбына арналған жеке платформа.</p><span class="link-label">Платформаға өту ↗</span></a>
+ </div>
+</section>
+
+<footer class="footer">
+ <div class="wrap">
+  <div class="author-block">
+   <div class="eyebrow">PROJECT AUTHOR · DEVELOPER</div>
+   <h3>Сайт авторы / құрастырушы</h3>
+   <p class="author-name">Ахметханов Азамат Берікханұлы</p>
+   <p class="author-contact">Instagram: <a href="https://www.instagram.com/azamatkoee_/" target="_blank" rel="noopener">@azamatkoee_</a></p>
+   <p class="small">LIGHT IMPACT · Интерактивті ғылыми зерттеу платформасы<br>«Камера обскура моделін жасау және зерттеу» · 2026</p>
+  </div>
+ </div>
+</footer>
+<script>
+const $=id=>document.getElementById(id);
+const power=$('power'),angle=$('angle'),shield=$('shield');
+function updateModel(){
+ const p=+power.value,a=+angle.value,has=shield.value==='yes';
+ $('powerVal').textContent=p+'%';$('angleVal').textContent=a+'°';
+ $('lamp').style.transform=`translateX(-50%) rotate(${a}deg)`;
+ $('beam').style.transform=`translateX(-50%) rotate(${a}deg)`;
+ $('beam').style.width=(90+p*1.35)+'px';
+ $('beam').style.opacity=(.25+p/130);
+ $('beam').style.clipPath=has?'polygon(35% 0,65% 0,85% 100%,15% 100%)':'polygon(43% 0,57% 0,100% 100%,0 100%)';
+ const sky=Math.max(3,Math.min(95,Math.round((100-p*.35)+(has?-32:0)+Math.abs(a)*.35)));
+ const ground=100-sky;
+ $('groundMetric').innerHTML=ground+'% <small>шартты индекс</small>';
+ $('skyMetric').innerHTML=sky+'% <small>шартты индекс</small>';
+ $('effMetric').innerHTML=Math.max(0,Math.min(100,Math.round(100-sky*.65)))+'% <small>шартты индекс</small>';
+ $('directionText').textContent='Бағыты: '+(Math.abs(a)<8?'төмен':a<0?'солға':'оңға');
+ $('shieldText').textContent='Қалқан: '+(has?'бар':'жоқ');
+}
+[power,angle,shield].forEach(el=>el.addEventListener('input',updateModel));updateModel();
+let records=JSON.parse(localStorage.getItem('lightImpactRecords')||'[]');
+let holeRows=[];
+function saveRecords(){localStorage.setItem('lightImpactRecords',JSON.stringify(records));renderRecords()}
+function renderRecords(){
+ $('recordCount').innerHTML=records.length+' <small>бақылау</small>';
+ const body=$('records');body.innerHTML='';
+ if(!records.length){body.innerHTML='<tr><td colspan="6" class="small">Әзірге жазба жоқ.</td></tr>'}
+ records.forEach((r,i)=>{const tr=document.createElement('tr');[r.date,r.place,r.lux===''?'—':r.lux,r.weather,r.note].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.appendChild(td)});const td=document.createElement('td');const b=document.createElement('button');b.className='btn';b.textContent='Өшіру';b.style.padding='5px 8px';b.onclick=()=>{records.splice(i,1);saveRecords()};td.appendChild(b);tr.appendChild(td);body.appendChild(tr)});
+ drawChart();
+}
+function drawChart(){
+ const c=$('chart'),ctx=c.getContext('2d'),dpr=window.devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;ctx.scale(dpr,dpr);ctx.clearRect(0,0,w,h);
+ ctx.strokeStyle='#29415b';ctx.lineWidth=1;for(let i=1;i<5;i++){let y=i*h/5;ctx.beginPath();ctx.moveTo(25,y);ctx.lineTo(w-8,y);ctx.stroke()}
+ const vals=records.filter(r=>r.lux!==''&&Number.isFinite(+r.lux)).slice(-12);if(!vals.length){ctx.fillStyle='#9bb0c8';ctx.font='12px Arial';ctx.fillText('Люкс мәндері енгізілген соң график көрінеді',12,h/2);$('chartHint').textContent='Люкс өлшемі бар жазбалар: 0';return}
+ const max=Math.max(1,...vals.map(r=>+r.lux));ctx.strokeStyle='#55d9e8';ctx.lineWidth=2.5;ctx.beginPath();vals.forEach((r,i)=>{let x=28+i*(w-45)/Math.max(1,vals.length-1),y=h-22-(+r.lux/max)*(h-48);i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke();vals.forEach((r,i)=>{let x=28+i*(w-45)/Math.max(1,vals.length-1),y=h-22-(+r.lux/max)*(h-48);ctx.fillStyle='#b7ed83';ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fill()});$('chartHint').textContent='График соңғы '+vals.length+' нақты енгізілген өлшемді көрсетеді.';
+}
+$('date').value=new Date().toISOString().slice(0,10);
+$('addRecord').onclick=()=>{const place=$('place').value.trim(),lux=$('lux').value;if(!place){alert('Бақылау орнын енгіз.');return}if(lux!==''&&(+lux<0||!Number.isFinite(+lux))){alert('Люкс мәнін тексер.');return}records.push({place,date:$('date').value,lux,weather:$('weather').value,note:$('note').value.trim()});saveRecords();$('place').value='';$('lux').value='';$('note').value=''};
+$('saveModel').onclick=()=>{records.push({place:'Виртуалды модель',date:new Date().toISOString().slice(0,10),lux:'',weather:'Модель',note:`Қуат ${power.value}%; бағыт ${angle.value}°; қалқан ${shield.value==='yes'?'бар':'жоқ'}`});saveRecords();alert('Модель параметрлері журналға сақталды.')};
+$('exportCsv').onclick=()=>{if(!records.length){alert('Экспорттау үшін алдымен дерек енгіз.');return}const rows=[['Күні','Орын','Люкс','Аспан','Ескерту'],...records.map(r=>[r.date,r.place,r.lux,r.weather,r.note])];const csv='\uFEFF'+rows.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(';')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='light-impact-observations.csv';a.click();URL.revokeObjectURL(a.href)};
+$('addHole').onclick=()=>{const d=$('hole').value,s=Math.max(1,Math.min(10,+$('sharp').value)),b=Math.max(1,Math.min(10,+$('brightness').value));holeRows.push({d,s,b});$('holeResult').innerHTML=`<strong>${d} мм</strong> тесік: анықтығы — <strong>${s}/10</strong>, жарықтығы — <strong>${b}/10</strong>. Енгізілген тәжірибе саны: ${holeRows.length}.`;};
+$('makePlan').onclick=()=>{const chosen=[...document.querySelectorAll('.solution:checked')].map(x=>x.value);$('planResult').textContent=chosen.length?'Ұсынылатын шаралар: '+chosen.join('; ')+'. Бұл ұсыныстарды нақты орынның жағдайымен тексеру қажет.':'Алдымен кемінде бір шешімді таңда.'};
+const questions={optics:['Тесік диаметрі өзгергенде кескіннің анықтығы мен жарықтығы қалай өзгереді?','Камера обскурадағы экран қашықтығы кескін өлшеміне қалай әсер етеді?','Жарық азайған жағдайда кескін сапасы қалай өзгереді?'],environment:['Жарық бағыты түнгі аспанға таралатын жарық мөлшеріне қалай әсер етеді?','Қала мен ауылдағы түнгі жарықтану деңгейі несімен ерекшеленеді?','Жасанды жарық түнгі жәндіктердің белсенділігіне қандай ықпал етуі мүмкін?'],technology:['Бағыттаушы қалқаны бар шам жарықтың шашырауын қалай өзгертеді?','Қозғалыс датчигі бар жарықтандыру жүйесі энергияны қалай үнемдей алады?','Түнгі жарықтануды бақылауда смартфон сенсорларын қолданудың шектеулері қандай?']};
+$('questionBtn').onclick=()=>{const arr=questions[$('topic').value];$('questionResult').textContent=arr[Math.floor(Math.random()*arr.length)]};
+window.addEventListener('resize',drawChart);renderRecords();
+
+// Research-method helpers
+$('saveHypothesis').onclick=()=>{const h=$('hypothesis').value.trim();if(!h){alert('Алдымен гипотезаңызды жазыңыз.');return}$('hypothesisResult').textContent='Сақталған гипотеза: '+h+' | Енді оны тәжірибемен тексеріп, нәтижесін журналға енгіз.'};
+$('analyzeNumbers').onclick=()=>{const raw=$('numbers').value.split(',').map(x=>Number(x.trim())).filter(x=>x!==''&&Number.isFinite(x));if(!raw.length){$('numberResult').textContent='Жарамды сандарды енгіз.';return}const avg=raw.reduce((a,b)=>a+b,0)/raw.length;$('numberResult').textContent=`Саны: ${raw.length} · Орташа мәні: ${avg.toFixed(2)} · Ең кішісі: ${Math.min(...raw)} · Ең үлкені: ${Math.max(...raw)}`};
+
+// Science quiz and rewards
+const quiz=[
+ {q:'Камера обскурада кескін не себепті пайда болады?',a:['Жарықтың түзу сызық бойымен таралуы','Дыбыстың шағылуы','Ауаның қысымы','Магнит өрісі'],c:0,why:'Жарық кішкентай тесіктен өтіп, экранда төңкерілген кескін түзеді.'},
+ {q:'Жарық ластануын азайтудың тиімді тәсілдерінің бірі қайсы?',a:['Шамды аспанға бағыттау','Қажетсіз жарықты өшіру және шамды төмен бағыттау','Барлық шамды күшейту','Түнде терезені ашу'],c:1,why:'Жарықты тек қажет жерге бағыттау артық шашырауды азайтуға көмектеседі.'},
+ {q:'Ғылыми тәжірибеде бір уақытта бір параметрді өзгерту не үшін керек?',a:['Нәтижені шатастыру үшін','Тәжірибені қысқарту үшін','Өзгерістің әсерін нақтырақ анықтау үшін','Кестені безендіру үшін'],c:2,why:'Басқа жағдайларды тұрақты ұстау себеп-салдар байланысын жақсырақ бағалауға көмектеседі.'},
+ {q:'Люкс (lx) қандай шаманы сипаттайды?',a:['Жарықтануды','Температураны','Дыбыс күшін','Қысымды'],c:0,why:'Люкс — бетке түсетін жарық ағынының ауданға қатынасын сипаттайтын жарықтану бірлігі.'},
+ {q:'Нәтиженің сенімділігін арттыру үшін не істеу керек?',a:['Бір рет өлшеу','Нәтижені ойдан толықтыру','Қайталама өлшеулер жүргізу','Қолайсыз деректерді жасыру'],c:2,why:'Қайталап өлшеу нәтижелердің тұрақтылығын бағалауға мүмкіндік береді.'}
+];
+let qIndex=0,xp=0,streak=0,answered=false;
+function renderQuiz(){const q=quiz[qIndex];$('quizQuestion').textContent=q.q;$('quizOptions').innerHTML='';q.a.forEach((v,i)=>{const b=document.createElement('button');b.className='btn';b.textContent=v;b.onclick=()=>answerQuiz(i);$('quizOptions').appendChild(b)});$('quizFeedback').textContent='Дұрыс жауапқа +10 ұпай. Түсіндірмені де оқы!';answered=false}
+function updateRewards(){
+ $('xp').textContent=xp;$('streak').textContent=streak;
+ $('level').textContent=xp>=100?'Ғылыми шебер':xp>=50?'Эко-зерттеуші':xp>=30?'Оптика білгірі':'Зерттеуші';
+ [['badge1',10,'🌟','Алғашқы қадам'],['badge2',30,'🔭','Оптика білгірі'],['badge3',50,'🌱','Эко-зерттеуші'],['badge4',100,'🏆','Ғылыми шебер']].forEach(([id,need,ico,name])=>{$(id).innerHTML=xp>=need?`${ico}<br><b>${name}</b><br><span class="small">Ашылды · ${need} ұпай</span>`:`🔒<br><b>${name}</b><br><span class="small">${need} ұпай қажет</span>`});
+}
+function answerQuiz(i){if(answered)return;answered=true;const q=quiz[qIndex];const buttons=[...$('quizOptions').querySelectorAll('button')];if(i===q.c){xp+=10;streak++;buttons[i].style.borderColor='#b7ed83';$('quizFeedback').innerHTML='<strong>Дұрыс! +10 ұпай.</strong> '+q.why}else{streak=0;buttons[i].style.borderColor='#f2a5d7';buttons[q.c].style.borderColor='#b7ed83';$('quizFeedback').textContent='Бұл жолы дұрыс емес. Дұрыс жауап: '+q.a[q.c]+'. '+q.why}updateRewards()}
+$('nextQuestion').onclick=()=>{qIndex=(qIndex+1)%quiz.length;renderQuiz()};
+const oldAddRecord=$('addRecord').onclick;
+$('addRecord').onclick=()=>{const before=records.length;oldAddRecord();if(records.length>before){xp+=5;updateRewards();$('quizFeedback').textContent='Бонус! Зерттеу журналына нақты бақылау қосқаның үшін +5 ұпай алдың.'}};
+renderQuiz();updateRewards();
+
+
+// Light pollution interactive night-sky scene (illustrative, not field data)
+const pollution=$('pollutionLevel'), nightCanvas=$('nightCanvas'), nctx=nightCanvas.getContext('2d');
+function drawNight(){
+ const level=+pollution.value, w=nightCanvas.width,h=nightCanvas.height;
+ $('pollutionValue').textContent=level+'%';
+ nctx.clearRect(0,0,w,h);
+ const sky=nctx.createLinearGradient(0,0,0,h);sky.addColorStop(0,level>65?'#5b5260':level>30?'#18283d':'#07172f');sky.addColorStop(1,'#111b2a');nctx.fillStyle=sky;nctx.fillRect(0,0,w,h);
+ // star visibility decreases as skyglow increases
+ const visible=Math.round(100*(1-level/115));
+ let seed=9381;function rnd(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
+ for(let i=0;i<100;i++){let x=rnd()*w,y=rnd()*h*.72,r=.8+rnd()*2.1;if(i<visible){nctx.fillStyle=`rgba(235,245,255,${.45+rnd()*.55})`;nctx.beginPath();nctx.arc(x,y,r,0,Math.PI*2);nctx.fill()}}
+ // city silhouette and increasing glow
+ const glow=nctx.createRadialGradient(w*.5,h*.77,8,w*.5,h*.77,190+level*2);glow.addColorStop(0,`rgba(255,190,100,${.08+level/125})`);glow.addColorStop(1,'rgba(255,170,80,0)');nctx.fillStyle=glow;nctx.fillRect(0,0,w,h);
+ for(let i=0;i<24;i++){let bw=20+(i*17)%35,bh=50+(i*29)%100,x=i*39-8;nctx.fillStyle='#111c29';nctx.fillRect(x,h-bh,bw,bh);for(let yy=h-bh+12;yy<h-10;yy+=17)for(let xx=x+7;xx<x+bw-4;xx+=12){nctx.fillStyle=(level>5&&((i+Math.floor(yy)+Math.floor(xx))%3===0))?`rgba(255,210,125,${.25+level/150})`:'#253346';nctx.fillRect(xx,yy,5,7)}}
+ // street lamps increase in brightness with level
+ for(let i=0;i<5;i++){let x=90+i*180,y=h-80;nctx.strokeStyle='#7e91a5';nctx.lineWidth=5;nctx.beginPath();nctx.moveTo(x,y);nctx.lineTo(x,y-85);nctx.lineTo(x+28,y-85);nctx.stroke();nctx.fillStyle='#ffe1a0';nctx.beginPath();nctx.arc(x+28,y-85,5+level/22,0,Math.PI*2);nctx.fill()}
+ $('starCount').textContent=visible+'/100';$('lampCount').textContent=Math.round(1+level/10)+'/10';
+ $('insectBar').style.width=Math.min(100,level*1.05)+'%';$('birdBar').style.width=Math.max(4,level*.72)+'%';$('darkBar').style.width=level+'%';
+ const band=v=>v<25?'Төмен':v<60?'Орташа':'Жоғары';
+ $('insectImpact').textContent=band(level);$('birdImpact').textContent=band(level*.8);$('darkImpact').textContent=band(level);
+ $('nightCaption').textContent=level<25?'Төмен деңгей: жұлдыздар анық көрінеді.':level<60?'Орташа деңгей: аспанның жарық фоны күшейіп, әлсіз жұлдыздар көмескіленеді.':'Жоғары деңгей: аспан жарқырап, көптеген жұлдыздар көзге көрінбей қалады.';
+ $('impactNote').textContent=level<25?'Төмен жарықта түнгі табиғи орта салыстырмалы түрде қараңғы сақталады.':level<60?'Жарық күшейгенде кейбір түнгі жәндіктер жасанды шамдарға тартылып, құстардың бағдарлануына кедергі тууы мүмкін.':'Жоғары жарық деңгейі түнгі табиғи қараңғылықты азайтады. Бұл жануарлардың қозғалысы мен бағдарлануына әсер етуі мүмкін. Көрсеткіштер — шартты модель.';
+}
+pollution.addEventListener('input',drawNight);drawNight();
+
+// Camera obscura ray diagram and film-developing simulation
+const oc=$('obscuraCanvas'), ox=oc.getContext('2d'), fc=$('filmCanvas'), fx=fc.getContext('2d');
+function drawObscura(){
+ const w=oc.width,h=oc.height;ox.clearRect(0,0,w,h);ox.fillStyle='#0a1728';ox.fillRect(0,0,w,h);
+ // outside scene on left
+ ox.fillStyle='#182b3e';ox.fillRect(25,55,190,320);ox.fillStyle='#f3c66e';ox.beginPath();ox.arc(120,115,35,0,Math.PI*2);ox.fill();
+ ox.fillStyle='#4c9b83';ox.fillRect(65,235,35,140);ox.fillRect(145,205,42,170);ox.fillStyle='#b8d5e5';ox.fillRect(40,175,145,5);
+ // box body
+ ox.fillStyle='#263b50';ox.fillRect(300,55,525,320);ox.strokeStyle='#86a3bd';ox.lineWidth=5;ox.strokeRect(300,55,525,320);
+ ox.fillStyle='#050a11';ox.fillRect(294,195,14,40);
+ // screen
+ ox.fillStyle='#d9e5e9';ox.fillRect(785,75,12,280);
+ // inverted image on screen
+ ox.fillStyle='#d6b45f';ox.beginPath();ox.arc(790,300,23,0,Math.PI*2);ox.fill();
+ ox.fillStyle='#397b6b';ox.fillRect(775,130,27,105);ox.fillRect(800,170,20,65);
+ // rays crossing at pinhole
+ ox.strokeStyle='#f5c66f';ox.lineWidth=2;ox.setLineDash([8,7]);ox.beginPath();ox.moveTo(155,115);ox.lineTo(300,215);ox.lineTo(790,300);ox.moveTo(155,300);ox.lineTo(300,215);ox.lineTo(790,115);ox.stroke();ox.setLineDash([]);
+ ox.fillStyle='#eaf4ff';ox.font='bold 22px Arial';ox.fillText('Нысан',75,35);ox.fillText('Камера қорабы',465,35);ox.fillText('Төңкерілген кескін',650,405);
+}
+function drawFilm(progress=0){
+ const w=fc.width,h=fc.height;fx.fillStyle='#090e14';fx.fillRect(0,0,w,h);
+ // inverted landscape on film
+ const g=fx.createLinearGradient(0,0,0,h);g.addColorStop(0,'#d4a85c');g.addColorStop(.48,'#7e9a9a');g.addColorStop(1,'#172b38');fx.fillStyle=g;fx.fillRect(0,0,w,h);
+ fx.fillStyle='#263b43';fx.beginPath();fx.moveTo(0,290);fx.lineTo(150,170);fx.lineTo(270,280);fx.lineTo(410,135);fx.lineTo(570,300);fx.lineTo(720,190);fx.lineTo(720,480);fx.lineTo(0,480);fx.fill();
+ fx.fillStyle='#d7bb78';fx.beginPath();fx.arc(540,110,48,0,Math.PI*2);fx.fill();
+ fx.fillStyle='#345e52';fx.fillRect(90,260,45,140);fx.fillRect(180,245,50,160);
+ fx.fillStyle='#d5e0d7';fx.fillRect(0,380,720,100);
+ fx.fillStyle=`rgba(0,0,0,${1-progress})`;fx.fillRect(0,0,w,h);
+}
+drawObscura();drawFilm(0);
+$('exposure').addEventListener('input',()=>{$('exposureValue').textContent=$('exposure').value+' сек'});
+$('developPhoto').onclick=()=>{
+ const secs=+$('exposure').value; $('filmVeil').classList.remove('revealed');$('photoStatus').textContent='Кескін пайда болып жатыр...';
+ drawFilm(0);
+ let start=performance.now(),duration=secs*350;
+ function reveal(now){let p=Math.min(1,(now-start)/duration);drawFilm(p);if(p<1)requestAnimationFrame(reveal);else{$('filmVeil').classList.add('revealed');$('photoStatus').textContent='Дайын! Кескін фотопленкадан шығарғандай біртіндеп айқындалды.'}}
+ requestAnimationFrame(reveal);
+};
+$('resetPhoto').onclick=()=>{drawFilm(0);$('filmVeil').classList.remove('revealed');$('photoStatus').textContent='Қайта бастау: фотопленка бастапқы күйге келтірілді.'};
+
+</script>
+</body></html>
